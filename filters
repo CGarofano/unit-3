@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Filters</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+
+      var rockets = [
+      { name:'Sally', age:32 },
+      { name:'Bob', age:23 },
+      { name:'Jim', age:16 },
+      { name:'Scott Rhine', age:7 },
+      { name:'Angie Davison', age:4 },
+      { name:'James Munger', age:3 }
+      ];
+
+      var names = [];
+
+      for (let i = 0; i < rockets.length; i++) {
+          names.push(rockets[i].name);
+          names.push(rockets[i].age);
+        }
+
+
+      var adultRockets = rockets.filter(item =>
+        item.age >=18);
+
+
+      document.write(names);
+      document.write("<br>");
+      document.write(JSON.stringify(adultRockets));
+
+    </script>
+  </body>
+</html>

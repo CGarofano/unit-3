@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Filters</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+
+      var names = [];
+      var name = prompt("Please enter a name:");
+      names.push(name);
+
+      for (let i = 0; i < 5; i++) {
+        names.push(prompt("Please enter another name:"));
+      }
+
+      
+      var upperNames = names.map(function(elem) {
+        return elem.toUpperCase();
+      });
+
+      
+      document.write(names);
+      document.write("<br>");
+      document.write(upperNames);
+
+    </script>
+  </body>
+</html>
